@@ -1,3 +1,19 @@
+//provider block 
+terraform {
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = "~> 7.8.0" 
+    }
+  }
+}
+
+provider "google" {
+  project = "terraform-project"
+  region  = "us-central1"
+}
+
+
 //creating storage bucket
 resource "google_storage_bucket" "my-bucket" {
   name          = "vit-project-githubdemo-bucket"
