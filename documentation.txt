@@ -1,7 +1,0 @@
-1. used the terraform code to create storage bucket in gcp. took code from the terraform documentation online.
-"enabling public access prevention" code
-https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket
-
-2. opened windows powershell as admin and installed terraform using chocolatey
-
-3. installed the vscode extension "HashiCorp Terraform"
