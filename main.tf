@@ -1,5 +1,11 @@
-//provider block 
+# You can tell Terraform to save its state in a Google Cloud Storage bucket.
+# That way, it always remembers what it created — even when GitHub runs in a new environment.
 terraform {
+  backend "gcs" {
+    bucket = "vit-project-terraform-state"
+    prefix = "terraform/state"
+  }
+
   required_providers {
     google = {
       source  = "hashicorp/google"
@@ -13,13 +19,11 @@ provider "google" {
   region  = "us-central1"
 }
 
-# //creating storage bucket
-# resource "google_storage_bucket" "my-bucket" {
-#   name                     = "vit-project-githubdemo-bucket"
-#   location                 = "US"
-#   force_destroy            = true
-#   public_access_prevention = "enforced"
-# }
-
-
+//creating storage bucket
+resource "google_storage_bucket" "my-bucket" {
+  name                     = "vit-project-githubdemo-bucket"
+  location                 = "US"
+  force_destroy            = true
+  public_access_prevention = "enforced"
+}
 
