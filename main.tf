@@ -27,7 +27,7 @@ resource "google_storage_bucket" "my-bucket" {
   public_access_prevention = "enforced"
 }
 
-resource "google_compute_instance" "vm-from-terraform"{
+resource "google_compute_instance" "vm-from-terraform" {
   name = "vm-from-terraform"
 
   machine_type = "e2-micro"
