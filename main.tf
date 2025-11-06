@@ -27,6 +27,7 @@ resource "google_storage_bucket" "my-bucket" {
   public_access_prevention = "enforced"
 }
 
+//creating compute engine instance
 resource "google_compute_instance" "vm-from-terraform" {
   name = "vm-from-terraform"
 
