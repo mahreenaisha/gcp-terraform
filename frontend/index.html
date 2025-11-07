@@ -1,26 +1,29 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Terraform Bucket Control</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GCP Resource Manager</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Terraform Bucket Management</h2>
+  <div class="container">
+    <img src="google-cloud-logo.png" alt="Cloud Logo" class="logo" />
+    <h1>GCP Resource Manager</h1>
+    <p>Control Your Google Cloud Platform Resources</p>
 
-  <button onclick="createBucket()">Create Bucket</button>
-  <button onclick="deleteBucket()">Delete Bucket</button>
+    <div class="button-group">
+      <button id="createBucket">Create Bucket</button>
+      <button id="deleteBucket">Delete Bucket</button>
+      <button id="createVM">Create VM</button>
+      <button id="deleteVM">Delete VM</button>
+    </div>
 
-  <p id="status"></p>
+    <div id="status"></div>
+  </div>
 
-  <script>
-    async function createBucket() {
-      const res = await fetch('http://127.0.0.1:8000/create-bucket', { method: 'POST' });
-      document.getElementById('status').innerText = await res.text();
-    }
-
-    async function deleteBucket() {
-      const res = await fetch('http://127.0.0.1:8000/delete-bucket', { method: 'DELETE' });
-      document.getElementById('status').innerText = await res.text();
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
