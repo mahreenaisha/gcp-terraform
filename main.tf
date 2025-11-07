@@ -31,17 +31,6 @@ resource "google_storage_bucket" "my-bucket-79-1" {
 
 
 
-resource "google_compute_instance" "my-vm-79-1" {
-  name         = "vm-79-1"
-  machine_type = "e2-micro"
-  zone         = "us-central1-a"
-
-  boot_disk {
-    initialize_params {
-      image = "debian-cloud/debian-11"
-      labels = {
-        my_label = "value"
-      }
     }
   }
 
