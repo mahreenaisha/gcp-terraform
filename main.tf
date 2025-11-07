@@ -33,9 +33,3 @@ resource "google_storage_bucket" "my-bucket-79-2" {
 }
 
 
-resource "google_storage_bucket" "my-bucket-79-3" {
-  name                     = "storage-bucket-79-3"
-  location                 = "US"
-  force_destroy            = true
-  public_access_prevention = "enforced"
-}
