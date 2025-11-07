@@ -27,12 +27,6 @@ resource "google_storage_bucket" "my-bucket-79-1" {
   public_access_prevention = "enforced"
 }
 
-
-
-
-//creating storage bucket 2
-
-
 resource "google_storage_bucket" "my-bucket-79-2" {
   name                     = "storage-bucket-79-2"
   location                 = "US"

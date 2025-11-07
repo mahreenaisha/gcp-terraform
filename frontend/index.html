@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Terraform Bucket Control</title>
+</head>
+<body>
+  <h2>Terraform Bucket Management</h2>
+
+  <button onclick="createBucket()">Create Bucket</button>
+  <button onclick="deleteBucket()">Delete Bucket</button>
+
+  <p id="status"></p>
+
+  <script>
+    async function createBucket() {
+      const res = await fetch('http://127.0.0.1:8000/create-bucket', { method: 'POST' });
+      document.getElementById('status').innerText = await res.text();
+    }
+
+    async function deleteBucket() {
+      const res = await fetch('http://127.0.0.1:8000/delete-bucket', { method: 'DELETE' });
+      document.getElementById('status').innerText = await res.text();
+    }
+  </script>
+</body>
+</html>
