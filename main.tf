@@ -2,7 +2,7 @@
 # That way, it always remembers what it created — even when GitHub runs in a new environment.
 terraform {
   backend "gcs" {
-    bucket = "vit-project-terraform-state"
+    bucket = "state-bucket-79-1"
     prefix = "terraform/state"
   }
 
@@ -20,33 +20,20 @@ provider "google" {
 }
 
 //creating storage bucket
-resource "google_storage_bucket" "my-bucket" {
-  name                     = "vit-project-githubdemo-bucket"
+resource "google_storage_bucket" "my-bucket-79-1" {
+  name                     = "storage-bucket-79-1"
   location                 = "US"
   force_destroy            = true
   public_access_prevention = "enforced"
 }
 
-//creating compute engine instance
-resource "google_compute_instance" "vm-from-terraform" {
-  name = "vm-from-terraform"
 
-  machine_type = "e2-micro"
-  zone         = "us-central1-a"
 
-  boot_disk {
-    initialize_params {
-      image = "debian-cloud/debian-11"
-      labels = {
-        my_label = "value"
-      }
-    }
-  }
 
-  network_interface {
-    network = "default"
-  }
-
-  metadata_startup_script = "echo hi > /test.txt"
+//creating storage bucket 2
+resource "google_storage_bucket" "my-bucket-79-2" {
+  name                     = "storage-bucket-79-2"
+  location                 = "US"
+  force_destroy            = true
+  public_access_prevention = "enforced"
 }
-
