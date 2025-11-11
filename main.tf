@@ -51,3 +51,11 @@ resource "google_compute_instance" "my-vm-79-1" {
 }
 
 
+
+
+resource "google_storage_bucket" "my-bucket-79-1" {
+  name                     = "storage-bucket-79-1"
+  location                 = "US"
+  force_destroy            = true
+  public_access_prevention = "enforced"
+}
