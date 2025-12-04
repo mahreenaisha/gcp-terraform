@@ -175,7 +175,7 @@ Ensure FastAPI server is running locally.
 
 ---
 
-## 📸 Screenshots (To be added)
+## 📸 Screenshots
 
 | Title                           | Description                           |
 | ------------------------------- | ------------------------------------- |
@@ -184,7 +184,7 @@ Ensure FastAPI server is running locally.
 | **Bucket in GCP Console**       | Confirm successful deployment         |
 | **SSH into VM**                 | Startup script `test.txt` verified    |
 
-> 📌 Place screenshots inside: `/assets/screenshots/`
+> 📌 Screenshots inside: `/assets/screenshots/`
 
 ---
 
