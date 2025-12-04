@@ -19,16 +19,6 @@ provider "google" {
   region  = "us-central1"
 }
 
-
-
-
-
-
-
-
-
-
-
 resource "google_compute_instance" "my-vm-79-1" {
   name         = "vm-79-1"
   machine_type = "e2-micro"
@@ -49,9 +39,6 @@ resource "google_compute_instance" "my-vm-79-1" {
 
   metadata_startup_script = "echo hi > /test.txt"
 }
-
-
-
 
 resource "google_storage_bucket" "my-bucket-79-1" {
   name                     = "storage-bucket-79-1"
